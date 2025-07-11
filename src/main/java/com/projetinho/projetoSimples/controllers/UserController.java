@@ -1,6 +1,6 @@
 package com.projetinho.projetoSimples.controllers;
 
-import entities.User;
+import com.projetinho.projetoSimples.entities.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +12,7 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<User> findAll(){
-        User user = new User(1, "maria", "maria@gmail.com", "9999999", "12345");
+        User user = new User(1L, "maria", "maria@gmail.com", "9999999", "12345");
         return ResponseEntity.ok().body(user);
     }
 }
